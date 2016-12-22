@@ -1,0 +1,31 @@
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
+.container {
+  @include container(1220px);
+}
+
+.mobile-stack {
+  @include breakpoint(max-width 600px){
+    @include span(12 of 12);
+  }
+}
+
+.aside {
+  @include span(4 of 12);
+  @include breakpoint(max-width 600px){
+    @include span(12 of 12);
+  }
+
+}
+
+.main {
+  @include span(8 of 12);
+ @include breakpoint(max-width 600px){
+    @include span(12 of 12);
+  }
+}
