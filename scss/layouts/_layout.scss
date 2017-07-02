@@ -29,3 +29,26 @@ $susy: (
     @include span(12 of 12);
   }
 }
+
+// reusble items
+%flex {
+  display:flex;
+}
+
+%flex-space-around {
+  justify-content:space-between;
+}
+
+.row {
+  @include clearfix;
+}
+
+.flex {
+  background:orange;
+  @extend %flex;
+  @extend %flex-space-around;
+    .box-flex {
+      background:yellow;
+      flex-basis: 18%;
+    }
+}
